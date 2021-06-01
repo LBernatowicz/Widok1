@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React from 'react';
 import {StyleSheet, View, Text, TouchableOpacity, Image} from 'react-native';
 import {StatusBar} from 'react-native';

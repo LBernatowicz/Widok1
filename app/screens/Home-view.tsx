@@ -41,8 +41,13 @@ const DATA = [
     navigationId: 'View7',
   },
 ];
+import {StackNavigationProp} from '@react-navigation/stack';
 
-const HomeView = ({navigation}) => {
+interface Props {
+  navigation: StackNavigationProp<any>;
+}
+
+const HomeView = ({navigation}: Props) => {
   const renderItem = ({item}: any) => {
     return (
       <TouchableOpacity

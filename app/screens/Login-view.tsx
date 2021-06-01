@@ -2,11 +2,12 @@ import React from 'react';
 import {StyleSheet, Image, View, Text, TouchableOpacity} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {StatusBar} from 'react-native';
+import {StackNavigationProp} from '@react-navigation/stack';
 
-import {NavigationContainer} from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-
-const LoginView = ({navigation}) => {
+interface Props {
+  navigation: StackNavigationProp<any>;
+}
+const LoginView = ({navigation}: Props) => {
   return (
     <SafeAreaView style={styles.mainContainer}>
       <StatusBar hidden={true} />

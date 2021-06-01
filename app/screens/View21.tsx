@@ -10,7 +10,7 @@ import {
 import {StatusBar} from 'react-native';
 
 import Header from '../components/Header';
-import {StackNavigationProp} from "@react-navigation/stack";
+import {StackNavigationProp} from '@react-navigation/stack';
 
 const DATA = [
   {
@@ -82,7 +82,7 @@ const Item = ({title, subTitle}: any) => (
         style={{
           justifyContent: 'center',
           alignItems: 'flex-start',
-          rght: 10,
+          right: 10,
           flex: 1 / 5,
         }}>
         <Text style={styles.subTilte}>{subTitle}</Text>
@@ -97,12 +97,12 @@ interface Props {
 }
 
 const View20 = ({navigation}: Props) => {
-  const renderItem = ({item}) => (
+  const renderItem = ({item}: any) => (
     <Item title={item.title} subTitle={item.subTitle} />
   );
   return (
     <SafeAreaView style={styles.mainContainer}>
-      <Header onPress={() => navigation.goBack()} />
+      <Header onPress={() => navigation.goBack()} navigation={navigation} />
       <ScrollView
         scrollEnabled={true}
         contentContainerStyle={styles.contentContainer}>

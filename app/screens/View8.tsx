@@ -27,7 +27,7 @@ const View8 = ({navigation}: Props) => {
       style={styles.container}>
       <SafeAreaView style={styles.mainContainer}>
         <StatusBar hidden={true} />
-        <Header onPress={() => navigation.goBack()} navigation={navigation}/>
+        <Header onPress={() => navigation.goBack()} navigation={navigation} />
         <View>
           <Text style={styles.textTitleContainer}>Create an Account</Text>
         </View>
