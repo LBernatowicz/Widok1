@@ -50,7 +50,19 @@ const Stack = createStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode={null} initialRouteName="View21">
+      <Stack.Navigator headerMode={null} initialRouteName="LoginView">
+        <Stack.Screen component={LoginView} name="LoginView" />
+        <Stack.Screen component={HomeView} name="HomeView" />
+        <Stack.Screen component={View7} name="View7" />
+        <Stack.Screen component={View8} name="View8" />
+        <Stack.Screen component={View9} name="View9" />
+        <Stack.Screen component={View11} name="View11" />
+        <Stack.Screen component={View13} name="View13" />
+        <Stack.Screen component={View15} name="View15" />
+        <Stack.Screen component={View17} name="View17" />
+        <Stack.Screen component={View18} name="View18" />
+        <Stack.Screen component={View19} name="View19" />
+        <Stack.Screen component={View20} name="View20" />
         <Stack.Screen component={View21} name="View21" />
       </Stack.Navigator>
     </NavigationContainer>

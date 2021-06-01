@@ -3,7 +3,10 @@ import {StyleSheet, Image, View, Text, TouchableOpacity} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {StatusBar} from 'react-native';
 
-const LoginView = () => {
+import {NavigationContainer} from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+const LoginView = ({navigation}) => {
   return (
     <SafeAreaView style={styles.mainContainer}>
       <StatusBar hidden={true} />
@@ -31,7 +34,7 @@ const LoginView = () => {
             </View>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => console.log('elo')}
+            onPress={() => navigation.navigate('View7')}
             style={styles.buttonContainer}>
             <View>
               <Text style={styles.loginTextContainer}>LOGIN</Text>

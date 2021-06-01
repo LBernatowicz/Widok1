@@ -9,12 +9,20 @@ import {
 } from 'react-native';
 import {StatusBar} from 'react-native';
 
-const Header = () => {
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+
+type Props = {
+  onPress(): void;
+  navigation: any;
+};
+
+const Header = ({navigation, onPress}: Props) => {
   return (
     <SafeAreaView style={styles.headerMainContainer}>
       <StatusBar hidden={true} />
       <View style={styles.headerContainer}>
-        <TouchableOpacity style={styles.arrowImageContainer}>
+        <TouchableOpacity style={styles.arrowImageContainer} onPress={onPress}>
           <Image
             style={styles.aImageContainer}
             source={require('../image/icon7.png')}
@@ -24,7 +32,9 @@ const Header = () => {
           <Text style={styles.text1Container}>UPSILON</Text>
           <Text style={styles.text2Container}>CONSEIL</Text>
         </View>
-        <TouchableOpacity style={styles.arrowImageContainer}>
+        <TouchableOpacity
+          style={styles.arrowImageContainer}
+          onPress={() => navigation.navigate('HomeView')}>
           <Image
             style={styles.hImageContainer}
             source={require('../image/icon8.png')}

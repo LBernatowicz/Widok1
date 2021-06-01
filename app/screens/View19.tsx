@@ -48,13 +48,12 @@ const View19 = () => {
           </View>
           <View
             style={{
-              backgroundColor: 'pink',
               marginBottom: 20,
               width: '50%',
               justifyContent: 'center',
               alignSelf: 'center',
             }}>
-            <Text>Your lead has been successfully added to the system!</Text>
+            <Text style={{textAlign: 'center'}}>Your lead has been successfully added to the system!</Text>
           </View>
         </View>
         <View style={styles.buttonMainContainer}>
