@@ -11,11 +11,16 @@ import {
 import {StatusBar} from 'react-native';
 
 import Header from '../components/Header';
+import {StackNavigationProp} from '@react-navigation/stack';
 
-const View19 = () => {
+interface Props {
+  navigation: StackNavigationProp<any>;
+}
+
+const View19 = ({navigation}: Props) => {
   return (
     <SafeAreaView style={styles.mainContainer}>
-      <Header />
+      <Header onPress={() => navigation.goBack()} navigation={navigation} />
       <View style={styles.bodyContainer}>
         <View
           style={{
@@ -53,7 +58,9 @@ const View19 = () => {
               justifyContent: 'center',
               alignSelf: 'center',
             }}>
-            <Text style={{textAlign: 'center'}}>Your lead has been successfully added to the system!</Text>
+            <Text style={{textAlign: 'center'}}>
+              Your lead has been successfully added to the system!
+            </Text>
           </View>
         </View>
         <View style={styles.buttonMainContainer}>

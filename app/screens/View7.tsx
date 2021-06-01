@@ -12,15 +12,18 @@ import {StatusBar} from 'react-native';
 
 import Header from '../components/Header';
 
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import {StackNavigationProp} from '@react-navigation/stack';
 
-const View7 = ({navigation}) => {
-  const [text, onChangeText] = useState(null);
+interface Props {
+  navigation: StackNavigationProp<any>;
+}
+
+const View7 = ({navigation}: Props) => {
+  const [text, onChangeText] = useState<string>('');
   return (
     <SafeAreaView style={styles.mainContainer}>
       <StatusBar hidden={true} />
-      <Header onPress={navigation.goBack()} />
+      <Header onPress={() => navigation.goBack()} navigation={navigation} />
       <Image
         style={styles.logoImageContainer}
         source={require('../image/6.png')}

@@ -14,12 +14,17 @@ import CheckBox from '@react-native-community/checkbox';
 
 import Header from '../components/Header';
 import InputTextComponent from '../components/InputTextComponent';
+import {StackNavigationProp} from '@react-navigation/stack';
 
-const View15 = () => {
+interface Props {
+  navigation: StackNavigationProp<any>;
+}
+
+const View15 = ({navigation}: Props) => {
   const [toggleCheckBox, setToggleCheckBox] = useState(false);
   return (
     <SafeAreaView style={styles.mainContainer}>
-      <Header />
+      <Header onPress={() => navigation.goBack()} navigation={navigation} />
       <ScrollView
         scrollEnabled={true}
         contentContainerStyle={styles.contentContainer}>

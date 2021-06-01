@@ -8,14 +8,12 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {StatusBar} from 'react-native';
+import {StackNavigationProp} from '@react-navigation/stack';
 
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
-
-type Props = {
-  onPress(): void;
-  navigation: any;
-};
+interface Props {
+  onPress: () => void;
+  navigation: StackNavigationProp<any>;
+}
 
 const Header = ({navigation, onPress}: Props) => {
   return (

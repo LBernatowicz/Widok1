@@ -13,6 +13,7 @@ import {StatusBar} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 
 import Header from '../components/Header';
+import {StackNavigationProp} from '@react-navigation/stack';
 
 const DATA = [
   {
@@ -70,13 +71,17 @@ const Item = ({title, subTitle1}: any) => (
   </View>
 );
 
-const View18 = () => {
+interface Props {
+  navigation: StackNavigationProp<any>;
+}
+
+const View18 = ({navigation}: Props) => {
   const renderItem = ({item}: any) => (
     <Item title={item.title} subTitle1={item.subTitle1} />
   );
   return (
     <SafeAreaView style={styles.mainContainer}>
-      <Header />
+      <Header onPress={() => navigation.goBack()} navigation={navigation} />
       <ScrollView
         scrollEnabled={true}
         contentContainerStyle={styles.contentContainer}>

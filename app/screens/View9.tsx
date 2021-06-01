@@ -1,17 +1,12 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import React, {useState} from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  TouchableOpacity,
-  Image,
-} from 'react-native';
+import React from 'react';
+import {StyleSheet, View, Text, TouchableOpacity, Image} from 'react-native';
 import {StatusBar} from 'react-native';
 import DeviceInfo from 'react-native-device-info';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
 import Header from '../components/Header';
+import {StackNavigationProp} from '@react-navigation/stack';
 
 const hasNotch = DeviceInfo.hasNotch();
 
@@ -19,11 +14,16 @@ const edges = hasNotch
   ? ['right', 'left', 'bottom']
   : ['bottom', 'top', 'right', 'left'];
 
-const View9 = () => {
+interface Props {
+  navigation: StackNavigationProp<any>;
+}
+
+const View9 = ({navigation}: Props) => {
   return (
+    // @ts-ignore
     <SafeAreaView edges={edges} style={styles.mainContainer}>
       <StatusBar hidden={true} />
-      <Header />
+      <Header onPress={() => navigation.goBack()} navigation={navigation} />
       <View style={styles.logoContainer}>
         <Image
           style={styles.buttonImageContainer}

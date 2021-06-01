@@ -11,12 +11,17 @@ import {StatusBar} from 'react-native';
 
 import Header from '../components/Header';
 import InputTextComponent from '../components/InputTextComponent';
+import {StackNavigationProp} from '@react-navigation/stack';
 
-const View13 = () => {
+interface Props {
+  navigation: StackNavigationProp<any>;
+}
+
+const View13 = ({navigation}: Props) => {
   return (
     <SafeAreaView style={styles.mainContainer}>
       <StatusBar hidden={true} />
-      <Header />
+      <Header onPress={() => navigation.goBack()} navigation={navigation} />
       <View
         // eslint-disable-next-line react-native/no-inline-styles
         style={{

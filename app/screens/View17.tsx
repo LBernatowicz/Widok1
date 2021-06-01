@@ -12,11 +12,16 @@ import {StatusBar} from 'react-native';
 
 import Header from '../components/Header';
 import CheckBoxInfo from '../components/CheckBoxInfo';
+import {StackNavigationProp} from '@react-navigation/stack';
 
-const View17 = () => {
+interface Props {
+  navigation: StackNavigationProp<any>;
+}
+
+const View17 = ({navigation}: Props) => {
   return (
     <SafeAreaView style={styles.mainContainer}>
-      <Header />
+      <Header onPress={() => navigation.goBack()} navigation={navigation} />
       <View style={styles.bodyContainer}>
         <View>
           <Image

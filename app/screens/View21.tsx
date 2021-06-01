@@ -10,6 +10,7 @@ import {
 import {StatusBar} from 'react-native';
 
 import Header from '../components/Header';
+import {StackNavigationProp} from "@react-navigation/stack";
 
 const DATA = [
   {
@@ -91,13 +92,17 @@ const Item = ({title, subTitle}: any) => (
   </View>
 );
 
-const View20 = () => {
+interface Props {
+  navigation: StackNavigationProp<any>;
+}
+
+const View20 = ({navigation}: Props) => {
   const renderItem = ({item}) => (
     <Item title={item.title} subTitle={item.subTitle} />
   );
   return (
     <SafeAreaView style={styles.mainContainer}>
-      <Header />
+      <Header onPress={() => navigation.goBack()} />
       <ScrollView
         scrollEnabled={true}
         contentContainerStyle={styles.contentContainer}>
