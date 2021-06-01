@@ -26,7 +26,7 @@ const View13 = () => {
         }}>
         <View style={styles.textAreaContainer}>
           <Text style={styles.textTitleContainer}>Cecile Marile</Text>
-          <Text style={{}}>Admininstrator</Text>
+          <Text style={{}}>Administrator</Text>
         </View>
         <View style={{alignItems: 'center', paddingVertical: 30}}>
           <View style={styles.imageRadiusContainer}>
@@ -60,10 +60,12 @@ const View13 = () => {
 };
 const styles = StyleSheet.create({
   mainContainer: {
-    backgroundColor: 'white',
+    backgroundColor: 'red',
     flex: 1,
   },
-  inputContainer: {},
+  inputContainer: {
+    alignItems: 'center',
+  },
   textTitleContainer: {
     color: 'black',
     fontFamily: 'Roboto-Black',

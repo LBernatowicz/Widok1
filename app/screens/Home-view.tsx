@@ -13,35 +13,41 @@ const DATA = [
   {
     image: require('../image/icon2.png'),
     title: 'PERFORMANCE',
+    navigationId: 'View15',
   },
   {
     image: require('../image/icon1.png'),
     title: 'MENAGE CASES',
+    navigationId: 'View8',
   },
   {
     image: require('../image/icon3.png'),
     title: 'ADD A NEW LEAD',
+    navigationId: 'View15',
   },
   {
     image: require('../image/icon6.png'),
     title: 'ALOCATE A LEAD',
+    navigationId: 'View21',
   },
   {
     image: require('../image/icon4.png'),
     title: 'MENAGE USER ROLES',
+    navigationId: 'View20',
   },
   {
     image: require('../image/icon5.png'),
     title: 'LOG OUT',
+    navigationId: 'View7',
   },
 ];
 
-const HomeView = () => {
+const HomeView = ({navigation}) => {
   const renderItem = ({item}: any) => {
     return (
       <TouchableOpacity
         style={styles.buttonContainer}
-        onPress={() => console.log(item.image)}>
+        onPress={() => navigation.navigate(item.navigationId)}>
         <View style={styles.iconContainer}>
           <Image style={styles.iconImageContainer} source={item.image} />
         </View>
@@ -178,12 +184,12 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontFamily: 'Roboto-Black',
     width: 130,
+    textAlign: 'center',
   },
   flatListContainer: {},
   flatListTextContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'red',
   },
 });
 

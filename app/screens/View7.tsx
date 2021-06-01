@@ -12,18 +12,23 @@ import {StatusBar} from 'react-native';
 
 import Header from '../components/Header';
 
-const View7 = () => {
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+
+const View7 = ({navigation}) => {
   const [text, onChangeText] = useState(null);
   return (
     <SafeAreaView style={styles.mainContainer}>
       <StatusBar hidden={true} />
-      <Header />
+      <Header onPress={navigation.goBack()} />
       <Image
         style={styles.logoImageContainer}
         source={require('../image/6.png')}
       />
       <View style={styles.bodyContainer}>
-        <TouchableOpacity style={styles.buttonContainer}>
+        <TouchableOpacity
+          style={styles.buttonContainer}
+          onPress={() => navigation.navigate('HomeView')}>
           <Text style={styles.textLoginContainer}>LOGIN</Text>
         </TouchableOpacity>
         <View style={styles.bodyInputsContainer}>
