@@ -8,10 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* Widok1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* Widok1Tests.m */; };
+		0FF544E6088B4751B443CC9C /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1A180EBB7284BDD9B4F233D /* Roboto-Italic.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		261FFEBF799B4FFBB3AFC75C /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A19049F75D2747BC91C6FD11 /* Roboto-Medium.ttf */; };
+		2ABDCA361AB843D18610CA73 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6396F8D542934F899664C00E /* Roboto-MediumItalic.ttf */; };
+		470A8C8136D640C7BBED4485 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 852A55C136924245ABE3A450 /* Roboto-Light.ttf */; };
+		48E561ED7AE24B3D8DDAFF6D /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DF5FA08ED2E47418BF88E36 /* Roboto-ThinItalic.ttf */; };
+		5DA6BA28DF8039DE6207A57E /* libPods-Widok1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAABF383778A6DB6800BCAA /* libPods-Widok1.a */; };
+		68E58C86EA9A50E53F2C4537 /* libPods-Widok1-Widok1Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AD2C7D1ED4754388BCD6E7 /* libPods-Widok1-Widok1Tests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		82F3D938A34F4B7482C6715F /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C94A16C6DDC49769028F4EF /* Roboto-LightItalic.ttf */; };
+		A1EFCE23B58C45FA909EDA3E /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1448A0A8FF5A45F2B15DD58F /* Roboto-BoldItalic.ttf */; };
+		A2AE65EA33924D27ABDFB94F /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0DAB05E9A634C17863F5CA6 /* Roboto-Thin.ttf */; };
+		B473B2F074BB40FF9F5EA3A3 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F080B4B5B1E451BBD42EF80 /* Roboto-Black.ttf */; };
+		CE711147D6AA47C4AC808853 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0FB420CE6F4469D974B68EB /* Roboto-Bold.ttf */; };
+		D6A49EEF6F6F4B73BBCBBCF3 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FA760D07D4A75919A8EA0 /* Roboto-BlackItalic.ttf */; };
+		DF469A86E4D2443393F59BC2 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20E97FA230F84292B4AC7ECE /* Roboto-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +42,32 @@
 		00E356EE1AD99517003FC87E /* Widok1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Widok1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* Widok1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Widok1Tests.m; sourceTree = "<group>"; };
+		0A5FA760D07D4A75919A8EA0 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-BlackItalic.ttf"; path = "../app/fonts/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Widok1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Widok1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Widok1/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Widok1/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Widok1/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Widok1/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Widok1/main.m; sourceTree = "<group>"; };
+		1448A0A8FF5A45F2B15DD58F /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-BoldItalic.ttf"; path = "../app/fonts/Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		1AAABF383778A6DB6800BCAA /* libPods-Widok1.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Widok1.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C9F962B51CEE7497BEB70B6 /* Pods-Widok1-Widok1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Widok1-Widok1Tests.release.xcconfig"; path = "Target Support Files/Pods-Widok1-Widok1Tests/Pods-Widok1-Widok1Tests.release.xcconfig"; sourceTree = "<group>"; };
+		20E97FA230F84292B4AC7ECE /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../app/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		3F080B4B5B1E451BBD42EF80 /* Roboto-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Black.ttf"; path = "../app/fonts/Roboto-Black.ttf"; sourceTree = "<group>"; };
+		4C94A16C6DDC49769028F4EF /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-LightItalic.ttf"; path = "../app/fonts/Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		4DF5FA08ED2E47418BF88E36 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-ThinItalic.ttf"; path = "../app/fonts/Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		6396F8D542934F899664C00E /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-MediumItalic.ttf"; path = "../app/fonts/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Widok1/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		852A55C136924245ABE3A450 /* Roboto-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Light.ttf"; path = "../app/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		A0DAB05E9A634C17863F5CA6 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Thin.ttf"; path = "../app/fonts/Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		A0FB420CE6F4469D974B68EB /* Roboto-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Bold.ttf"; path = "../app/fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		A19049F75D2747BC91C6FD11 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Medium.ttf"; path = "../app/fonts/Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		B3B7704C0401A022E1B3CDCA /* Pods-Widok1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Widok1.release.xcconfig"; path = "Target Support Files/Pods-Widok1/Pods-Widok1.release.xcconfig"; sourceTree = "<group>"; };
+		BDD4E1EDAB5CE49C4ED5B55D /* Pods-Widok1-Widok1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Widok1-Widok1Tests.debug.xcconfig"; path = "Target Support Files/Pods-Widok1-Widok1Tests/Pods-Widok1-Widok1Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D1A180EBB7284BDD9B4F233D /* Roboto-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Italic.ttf"; path = "../app/fonts/Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		E47C8A03845BFCEAA3A3FA0A /* Pods-Widok1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Widok1.debug.xcconfig"; path = "Target Support Files/Pods-Widok1/Pods-Widok1.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F8AD2C7D1ED4754388BCD6E7 /* libPods-Widok1-Widok1Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Widok1-Widok1Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68E58C86EA9A50E53F2C4537 /* libPods-Widok1-Widok1Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA6BA28DF8039DE6207A57E /* libPods-Widok1.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				1AAABF383778A6DB6800BCAA /* libPods-Widok1.a */,
+				F8AD2C7D1ED4754388BCD6E7 /* libPods-Widok1-Widok1Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,6 +145,8 @@
 				00E356EF1AD99517003FC87E /* Widok1Tests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				B8108638E264F64C06051EFA /* Pods */,
+				F2827D89628D4662875C6A35 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -124,6 +162,38 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		B8108638E264F64C06051EFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E47C8A03845BFCEAA3A3FA0A /* Pods-Widok1.debug.xcconfig */,
+				B3B7704C0401A022E1B3CDCA /* Pods-Widok1.release.xcconfig */,
+				BDD4E1EDAB5CE49C4ED5B55D /* Pods-Widok1-Widok1Tests.debug.xcconfig */,
+				1C9F962B51CEE7497BEB70B6 /* Pods-Widok1-Widok1Tests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F2827D89628D4662875C6A35 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3F080B4B5B1E451BBD42EF80 /* Roboto-Black.ttf */,
+				0A5FA760D07D4A75919A8EA0 /* Roboto-BlackItalic.ttf */,
+				A0FB420CE6F4469D974B68EB /* Roboto-Bold.ttf */,
+				1448A0A8FF5A45F2B15DD58F /* Roboto-BoldItalic.ttf */,
+				D1A180EBB7284BDD9B4F233D /* Roboto-Italic.ttf */,
+				852A55C136924245ABE3A450 /* Roboto-Light.ttf */,
+				4C94A16C6DDC49769028F4EF /* Roboto-LightItalic.ttf */,
+				A19049F75D2747BC91C6FD11 /* Roboto-Medium.ttf */,
+				6396F8D542934F899664C00E /* Roboto-MediumItalic.ttf */,
+				20E97FA230F84292B4AC7ECE /* Roboto-Regular.ttf */,
+				A0DAB05E9A634C17863F5CA6 /* Roboto-Thin.ttf */,
+				4DF5FA08ED2E47418BF88E36 /* Roboto-ThinItalic.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,9 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "Widok1Tests" */;
 			buildPhases = (
+				923E58A47A31455F53D997ED /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+				A2AD4E2554619ADA687CB945 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,11 +221,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Widok1" */;
 			buildPhases = (
+				A73E2C911F8FF9112CF7C2E4 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				C646D2035C59FCEC8C9A449A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,6 +288,18 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				B473B2F074BB40FF9F5EA3A3 /* Roboto-Black.ttf in Resources */,
+				D6A49EEF6F6F4B73BBCBBCF3 /* Roboto-BlackItalic.ttf in Resources */,
+				CE711147D6AA47C4AC808853 /* Roboto-Bold.ttf in Resources */,
+				A1EFCE23B58C45FA909EDA3E /* Roboto-BoldItalic.ttf in Resources */,
+				0FF544E6088B4751B443CC9C /* Roboto-Italic.ttf in Resources */,
+				470A8C8136D640C7BBED4485 /* Roboto-Light.ttf in Resources */,
+				82F3D938A34F4B7482C6715F /* Roboto-LightItalic.ttf in Resources */,
+				261FFEBF799B4FFBB3AFC75C /* Roboto-Medium.ttf in Resources */,
+				2ABDCA361AB843D18610CA73 /* Roboto-MediumItalic.ttf in Resources */,
+				DF469A86E4D2443393F59BC2 /* Roboto-Regular.ttf in Resources */,
+				A2AE65EA33924D27ABDFB94F /* Roboto-Thin.ttf in Resources */,
+				48E561ED7AE24B3D8DDAFF6D /* Roboto-ThinItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +319,84 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
+		};
+		923E58A47A31455F53D997ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Widok1-Widok1Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2AD4E2554619ADA687CB945 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Widok1-Widok1Tests/Pods-Widok1-Widok1Tests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Widok1-Widok1Tests/Pods-Widok1-Widok1Tests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Widok1-Widok1Tests/Pods-Widok1-Widok1Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A73E2C911F8FF9112CF7C2E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Widok1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C646D2035C59FCEC8C9A449A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Widok1/Pods-Widok1-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Widok1/Pods-Widok1-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Widok1/Pods-Widok1-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -286,6 +450,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDD4E1EDAB5CE49C4ED5B55D /* Pods-Widok1-Widok1Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -312,6 +477,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C9F962B51CEE7497BEB70B6 /* Pods-Widok1-Widok1Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -335,6 +501,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E47C8A03845BFCEAA3A3FA0A /* Pods-Widok1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -360,6 +527,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3B7704C0401A022E1B3CDCA /* Pods-Widok1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -414,6 +582,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -478,6 +647,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

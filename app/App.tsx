@@ -51,7 +51,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator headerMode={null} initialRouteName="View21">
-        <Stack.Screen component={View21} name="View21" />
+        <Stack.Screen component={View9} name="View21" />
       </Stack.Navigator>
     </NavigationContainer>
   );

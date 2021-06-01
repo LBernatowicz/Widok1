@@ -1,7 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import React, {useState} from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
   View,
   Text,
@@ -9,12 +8,20 @@ import {
   Image,
 } from 'react-native';
 import {StatusBar} from 'react-native';
+import DeviceInfo from 'react-native-device-info';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 import Header from '../components/Header';
 
+const hasNotch = DeviceInfo.hasNotch();
+
+const edges = hasNotch
+  ? ['right', 'left', 'bottom']
+  : ['bottom', 'top', 'right', 'left'];
+
 const View9 = () => {
   return (
-    <SafeAreaView style={styles.mainContainer}>
+    <SafeAreaView edges={edges} style={styles.mainContainer}>
       <StatusBar hidden={true} />
       <Header />
       <View style={styles.logoContainer}>

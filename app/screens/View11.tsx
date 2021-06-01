@@ -5,7 +5,7 @@ import {StatusBar} from 'react-native';
 
 const LoginView = () => {
   return (
-    <SafeAreaView style={styles.mainContainer}>
+    <SafeAreaView edges={['right', 'left']} style={styles.mainContainer}>
       <StatusBar hidden={true} />
       <View style={styles.mainImageContainer}>
         <Image
