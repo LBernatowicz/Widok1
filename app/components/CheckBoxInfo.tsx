@@ -1,5 +1,12 @@
 import React, {useState} from 'react';
-import {View, SafeAreaView, StyleSheet, Text} from 'react-native';
+import {
+  View,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  Image,
+} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 
 type Props = {
@@ -9,18 +16,29 @@ type Props = {
 };
 
 const CheckBoxInfo = ({title, text1, text2}: Props) => {
-  const [toggleCheckBox, setToggleCheckBox] = useState(false);
+  const [tickHandle, setTickHandle] = useState(false);
   return (
     <SafeAreaView style={styles.mainContainer}>
       <View style={styles.bodyContainer}>
         <Text style={styles.mainText}>{`${title}:`}</Text>
         <View style={styles.subBodyContainer}>
           <View style={styles.checkBoxContainer}>
-            <CheckBox
-              disabled={false}
-              value={toggleCheckBox}
-              onValueChange={newValue => setToggleCheckBox(newValue)}
-            />
+            <TouchableOpacity onPress={() => setTickHandle(!tickHandle)}>
+              <View
+                style={{
+                  borderWidth: 2,
+                  borderColor: 'black',
+                  width: 20,
+                  height: 20,
+                  borderRadius: 4,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                {tickHandle === true && (
+                  <Image source={require('../image/tick.png')} />
+                )}
+              </View>
+            </TouchableOpacity>
           </View>
           <View>
             <Text>{text1}</Text>

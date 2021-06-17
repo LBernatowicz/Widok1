@@ -13,7 +13,7 @@ const DATA = [
   {
     image: require('../image/icon2.png'),
     title: 'PERFORMANCE',
-    navigationId: 'View15',
+    navigationId: 'View22',
   },
   {
     image: require('../image/icon1.png'),

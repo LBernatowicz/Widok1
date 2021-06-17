@@ -13,15 +13,25 @@ import {StatusBar} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 
 import Header from '../components/Header';
-import InputTextComponent from '../components/InputTextComponent';
 import {StackNavigationProp} from '@react-navigation/stack';
+
+import View15_1 from './View15_1';
+import View15_2 from './View15_2';
+import View15_3 from './View15_3';
+import View15_4 from './View15_4';
 
 interface Props {
   navigation: StackNavigationProp<any>;
 }
 
 const View15 = ({navigation}: Props) => {
-  const [toggleCheckBox, setToggleCheckBox] = useState(false);
+  const [strona, setStrona] = useState(1);
+
+  let handleClick = () => {
+    {
+      strona === 4 ? navigation.navigate('HomeView') : setStrona(strona + 1);
+    }
+  };
   return (
     <SafeAreaView style={styles.mainContainer}>
       <Header onPress={() => navigation.goBack()} navigation={navigation} />
@@ -29,65 +39,30 @@ const View15 = ({navigation}: Props) => {
         scrollEnabled={true}
         contentContainerStyle={styles.contentContainer}>
         <View style={styles.bodyContainer}>
-          <View>
-            <Image
-              style={styles.logoImageContainer}
-              source={require('../image/1-4.png')}
-            />
-          </View>
-          <View style={styles.titleContainer}>
-            <View
-              style={{
-                flexDirection: 'row',
-                marginTop: 20,
-                marginBottom: 10,
-                backgroundColor: 'white',
-                height: 33,
-                width: '50%',
-                justifyContent: 'space-between',
-                alignItems: 'flex-end',
-              }}>
-              <Text style={styles.mainText}>STEP 1/4</Text>
-              <View style={{}}>
-                <Image
-                  style={styles.imageContainer}
-                  source={require('../image/arrow.png')}
-                />
-              </View>
-            </View>
-            <View style={{backgroundColor: 'white', marginBottom: 20}}>
-              <Text>Fill personal informaton about the new lead</Text>
-            </View>
-          </View>
-          <View style={{backgroundColor: 'white', width: '100%'}}>
-            <InputTextComponent title="NAME" />
-            <InputTextComponent title="SURNAME" />
-            <InputTextComponent title="EMAIL" />
-            <InputTextComponent title="PHONE NUMBER" />
-            <InputTextComponent title="COUNTRY/REGION" />
-            <InputTextComponent title="CITY" />
-            <InputTextComponent title="NOTE" />
-          </View>
+          {strona === 1 && <View>{<View15_1 />}</View>}
+          {strona === 2 && <View>{<View15_2 />}</View>}
+          {strona === 3 && <View>{<View15_3 />}</View>}
+          {strona === 4 && <View>{<View15_4 />}</View>}
           <View style={styles.buttonMainContainer}>
             <TouchableOpacity
-              onPress={() => console.log('elo')}
+              onPress={handleClick}
               style={styles.buttonContainer}>
               <View>
-                <Text style={styles.loginTextContainer}>GO TO NEXT STEP</Text>
+                {strona === 4 ? (
+                  <View>
+                    <Text style={styles.loginTextContainer}>
+                      GO BACK TO MENU
+                    </Text>
+                  </View>
+                ) : (
+                  <View>
+                    <Text style={styles.loginTextContainer}>
+                      GO TO NEXT STEP
+                    </Text>
+                  </View>
+                )}
               </View>
             </TouchableOpacity>
-          </View>
-        </View>
-        <View style={styles.checkContainer}>
-          <View style={styles.checkBox}>
-            <Text style={styles.textContainer}>COUPLE</Text>
-            <View>
-              <CheckBox
-                disabled={false}
-                value={toggleCheckBox}
-                onValueChange={newValue => setToggleCheckBox(newValue)}
-              />
-            </View>
           </View>
         </View>
       </ScrollView>
@@ -136,7 +111,8 @@ const styles = StyleSheet.create({
   buttonMainContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    margin: 60,
+    marginVertical: 30,
+    marginHorizontal: 60,
   },
   logoImageContainer: {},
   contentContainer: {

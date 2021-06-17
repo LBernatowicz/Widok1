@@ -32,12 +32,11 @@ const InputTextComponent = ({title, subTitle, placeHolder}: Props) => {
 const styles = StyleSheet.create({
   mainContainer: {
     width: '100%',
- 
   },
   titleContainer: {
     alignItems: 'flex-start',
     justifyContent: 'center',
-    left: 20,
+    left: 5,
     paddingVertical: 5,
   },
   subTitleContainer: {
@@ -48,11 +47,12 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   loginInputContainer: {
-    width: 308,
+    width: 338,
     height: 47,
     borderWidth: 2,
     borderRadius: 10,
     borderColor: '#dcdcdc',
+    paddingLeft: 15,
   },
   subTextContainer: {
     color: 'black',
