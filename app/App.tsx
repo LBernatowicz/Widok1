@@ -25,6 +25,7 @@ import View18 from './screens/View18';
 import View19 from './screens/View19';
 import View20 from './screens/View20';
 import View21 from './screens/View21';
+import View22 from './screens/View22';
 
 const Stack = createStackNavigator();
 
@@ -45,6 +46,7 @@ const App = () => {
         <Stack.Screen component={View19} name="View19" />
         <Stack.Screen component={View20} name="View20" />
         <Stack.Screen component={View21} name="View21" />
+        <Stack.Screen component={View22} name="View22" />
       </Stack.Navigator>
     </NavigationContainer>
   );
