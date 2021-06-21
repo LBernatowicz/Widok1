@@ -9,7 +9,6 @@ import {
   Platform,
 } from 'react-native';
 import {StatusBar} from 'react-native';
-import CheckBox from '@react-native-community/checkbox';
 
 import Header from '../components/Header';
 import InputTextComponent from '../components/InputTextComponent';
