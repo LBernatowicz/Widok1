@@ -48,11 +48,7 @@ const View17 = ({navigation}: Props) => {
                   <Text style={styles.calendarText}>Calendar</Text>
                 </View>
                 <View style={styles.calender}>
-                  <CalendarPicker onDateChange={null} />
-
-                  <View>
-                    <Text>SELECTED DATE:</Text>
-                  </View>
+                  <CalendarPicker onDateChange={null} width={290} />
                 </View>
                 <View style={styles.calenderButtonContainer}>
                   <TouchableOpacity
@@ -402,7 +398,7 @@ const styles = StyleSheet.create({
   calender: {
     flex: 1,
     backgroundColor: '#FFFFFF',
-    marginTop: 100,
+    height: 200,
   },
 });
 export default View17;
