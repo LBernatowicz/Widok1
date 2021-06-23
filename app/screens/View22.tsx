@@ -9,9 +9,12 @@ import {
   ScrollView,
   Dimensions,
   Modal,
+  FlatList,
 } from 'react-native';
 import {StatusBar} from 'react-native';
+// @ts-ignore
 import Pie from 'react-native-pie';
+// @ts-ignore
 import CalendarPicker from 'react-native-calendar-picker';
 
 import Header from '../components/Header';
@@ -20,13 +23,147 @@ import CircleGraph from '../components/CircleGraph';
 import {StackNavigationProp} from '@react-navigation/stack';
 const {width} = Dimensions.get('window');
 
+const DATA = [
+  {
+    id: '1',
+    complete: 23,
+    total: 100,
+    titleText: 'WIN CASES',
+    titleSubText:
+      'Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod',
+    leftDirection: true,
+    strokeColor: 'red',
+    bcgColor: '#f5f5f5',
+    bankList: false,
+  },
+  {
+    id: '2',
+    complete: 33,
+    total: 55,
+    titleText: 'WIN CASES',
+    titleSubText:
+      'Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod',
+    leftDirection: false,
+    strokeColor: 'blue',
+    bcgColor: '#f5f5f5',
+    bankList: false,
+  },
+  {
+    id: '3',
+    complete: 74,
+    total: 132,
+    titleText: 'WIN CASES',
+    titleSubText:
+      'Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod',
+    leftDirection: true,
+    strokeColor: 'purple',
+    bcgColor: '#f5f5f5',
+    bankList: false,
+  },
+  {
+    id: '4',
+    complete: 93,
+    total: 100,
+    titleText: 'WIN CASES',
+    titleSubText:
+      'Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod',
+    leftDirection: true,
+    strokeColor: '#66cdaa',
+    bcgColor: '#f5f5f5',
+    bankList: false,
+  },
+  {
+    id: '5',
+    complete: 66,
+    total: 77,
+    titleText: 'WIN CASES',
+    titleSubText:
+      'Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod',
+    leftDirection: true,
+    strokeColor: '#daa520',
+    bcgColor: '#f5f5f5',
+    bankList: true,
+  },
+  {
+    id: '6',
+    complete: 87,
+    total: 100,
+    titleText: 'WIN CASES',
+    titleSubText:
+      'Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod',
+    leftDirection: true,
+    strokeColor: '#6495ed',
+    bcgColor: '#f5f5f5',
+    bankList: false,
+  },
+  {
+    id: '7',
+    complete: 43,
+    total: 150,
+    titleText: 'WIN CASES',
+    titleSubText:
+      'Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod',
+    leftDirection: true,
+    strokeColor: '#7fffd4',
+    bcgColor: '#f5f5f5',
+    bankList: false,
+  },
+  {
+    id: '8',
+    complete: 32,
+    total: 185,
+    titleText: 'WIN CASES',
+    titleSubText:
+      'Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod',
+    leftDirection: true,
+    strokeColor: '#deb887',
+    bcgColor: '#f5f5f5',
+    bankList: true,
+  },
+];
 interface Props {
   navigation: StackNavigationProp<any>;
 }
+const Item = ({
+  complete,
+  total,
+  titleText,
+  titleSubText,
+  leftDirection,
+  strokeColor,
+  bcgColor,
+  bankList,
+}: any) => (
+  <TouchableOpacity>
+    <CircleGraph
+      complete={complete}
+      total={total}
+      titleText={titleText}
+      titleSubText={titleSubText}
+      leftDirection={leftDirection}
+      strokeColor={strokeColor}
+      bcgColor={bcgColor}
+      bankList={bankList}
+    />
+  </TouchableOpacity>
+);
 
-const View17 = ({navigation}: Props) => {
+const View22 = ({navigation}: Props) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [startDate, onDateChange] = useState(1);
+
+  const renderItem = ({item}) => (
+    <Item
+      complete={item.complete}
+      total={item.total}
+      titleText={item.titleText}
+      titleSubText={item.titleSubText}
+      leftDirection={item.leftDirection}
+      strokeColor={item.strokeColor}
+      bcgColor={item.bcgColor}
+      bankList={item.bankList}
+    />
+  );
   return (
     <SafeAreaView style={styles.mainContainer}>
       <Header onPress={() => navigation.goBack()} navigation={navigation} />
@@ -139,108 +276,11 @@ const View17 = ({navigation}: Props) => {
           </View>
         </View>
         <View style={styles.graphContainer}>
-          <TouchableOpacity>
-            <CircleGraph
-              complete={23}
-              total={87}
-              titleText={'WIN CASES'}
-              titleSubText={
-                'Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod'
-              }
-              leftDirection={true}
-              strokeColor={'red'}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <CircleGraph
-              complete={100}
-              total={100}
-              titleText={'WIN CASES'}
-              titleSubText={
-                'Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod'
-              }
-              leftDirection={false}
-              strokeColor={'blue'}
-              bcgColor={'#f5f5f5'}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <CircleGraph
-              complete={32}
-              total={54}
-              titleText={'WIN CASES'}
-              titleSubText={
-                'Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod'
-              }
-              leftDirection={true}
-              strokeColor={'purple'}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <CircleGraph
-              complete={100}
-              total={200}
-              titleText={'WIN CASES'}
-              titleSubText={
-                'Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod'
-              }
-              leftDirection={true}
-              strokeColor={'#66cdaa'}
-              bcgColor={'#f5f5f5'}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <CircleGraph
-              complete={98}
-              total={99}
-              titleText={'WIN CASES'}
-              titleSubText={
-                'Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod'
-              }
-              leftDirection={true}
-              strokeColor={'#daa520'}
-              bankList={true}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <CircleGraph
-              complete={34}
-              total={67}
-              titleText={'WIN CASES'}
-              titleSubText={
-                'Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod'
-              }
-              leftDirection={true}
-              strokeColor={'#6495ed'}
-              bcgColor={'#f5f5f5'}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <CircleGraph
-              complete={3}
-              total={34}
-              titleText={'WIN CASES'}
-              titleSubText={
-                'Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod'
-              }
-              leftDirection={true}
-              strokeColor={'#7fffd4'}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <CircleGraph
-              complete={34}
-              total={210}
-              titleText={'WIN CASES'}
-              titleSubText={
-                'Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod'
-              }
-              leftDirection={true}
-              strokeColor={'#deb887'}
-              bcgColor={'#f5f5f5'}
-              bankList={true}
-            />
-          </TouchableOpacity>
+          <FlatList
+            data={DATA}
+            renderItem={renderItem}
+            keyExtractor={item => item.id}
+          />
         </View>
         <View />
       </ScrollView>
@@ -401,4 +441,4 @@ const styles = StyleSheet.create({
     height: 200,
   },
 });
-export default View17;
+export default View22;
