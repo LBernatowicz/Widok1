@@ -33,7 +33,7 @@ const DATA = [
       'Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod',
     leftDirection: true,
     strokeColor: 'red',
-    bcgColor: '#f5f5f5',
+    bcgColor: 'white',
     bankList: false,
   },
   {
@@ -57,7 +57,7 @@ const DATA = [
       'Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod',
     leftDirection: true,
     strokeColor: 'purple',
-    bcgColor: '#f5f5f5',
+    bcgColor: 'white',
     bankList: false,
   },
   {
@@ -81,7 +81,7 @@ const DATA = [
       'Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod',
     leftDirection: true,
     strokeColor: '#daa520',
-    bcgColor: '#f5f5f5',
+    bcgColor: 'white',
     bankList: true,
   },
   {
@@ -105,7 +105,7 @@ const DATA = [
       'Lorem ipsum dolor si amet, consectetur adipisicing elit, sed do eiusmod',
     leftDirection: true,
     strokeColor: '#7fffd4',
-    bcgColor: '#f5f5f5',
+    bcgColor: 'white',
     bankList: false,
   },
   {
@@ -124,166 +124,147 @@ const DATA = [
 interface Props {
   navigation: StackNavigationProp<any>;
 }
-const Item = ({
-  complete,
-  total,
-  titleText,
-  titleSubText,
-  leftDirection,
-  strokeColor,
-  bcgColor,
-  bankList,
-}: any) => (
-  <TouchableOpacity>
-    <CircleGraph
-      complete={complete}
-      total={total}
-      titleText={titleText}
-      titleSubText={titleSubText}
-      leftDirection={leftDirection}
-      strokeColor={strokeColor}
-      bcgColor={bcgColor}
-      bankList={bankList}
-    />
-  </TouchableOpacity>
-);
 
 const View22 = ({navigation}: Props) => {
   const [modalVisible, setModalVisible] = useState(false);
-  const [startDate, onDateChange] = useState(1);
 
-  const renderItem = ({item}) => (
-    <Item
-      complete={item.complete}
-      total={item.total}
-      titleText={item.titleText}
-      titleSubText={item.titleSubText}
-      leftDirection={item.leftDirection}
-      strokeColor={item.strokeColor}
-      bcgColor={item.bcgColor}
-      bankList={item.bankList}
-    />
-  );
+  const renderItem = ({item}: any) => {
+    return (
+      <TouchableOpacity style={styles.graphContainer}>
+        <CircleGraph
+          complete={item.complete}
+          total={item.total}
+          titleText={item.titleText}
+          titleSubText={item.titleSubText}
+          leftDirection={item.leftDirection}
+          strokeColor={item.strokeColor}
+          bcgColor={item.bcgColor}
+          bankList={item.bankList}
+        />
+      </TouchableOpacity>
+    );
+  };
   return (
     <SafeAreaView style={styles.mainContainer}>
       <Header onPress={() => navigation.goBack()} navigation={navigation} />
-      <ScrollView
-        scrollEnabled={true}
-        contentContainerStyle={styles.contentContainer}>
-        <View style={styles.centeredView}>
-          <Modal
-            animationType="fade"
-            transparent={true}
-            visible={modalVisible}
-            onRequestClose={() => {
-              Alarm.alert('Modal has been closed.');
-              setModalVisible(!modalVisible);
-            }}>
-            <View style={styles.centeredView}>
-              <View style={styles.modalView}>
-                <View style={styles.calendarContainer}>
-                  <Text style={styles.calendarText}>Calendar</Text>
-                </View>
-                <View style={styles.calender}>
-                  <CalendarPicker onDateChange={null} width={290} />
-                </View>
-                <View style={styles.calenderButtonContainer}>
-                  <TouchableOpacity
-                    onPress={() => setModalVisible(!modalVisible)}>
-                    <View style={styles.buttonSave}>
-                      <Text style={styles.saveButtonText}>SAVE</Text>
+      <ScrollView>
+        <FlatList
+          ListHeaderComponentStyle={styles.contentContainer}
+          ListHeaderComponent={
+            <>
+              <View style={styles.centeredView}>
+                <Modal
+                  animationType="fade"
+                  transparent={true}
+                  visible={modalVisible}
+                  onRequestClose={() => {
+                    setModalVisible(!modalVisible);
+                  }}>
+                  <View style={styles.centeredView}>
+                    <View style={styles.modalView}>
+                      <View style={styles.calendarContainer}>
+                        <Text style={styles.calendarText}>Calendar</Text>
+                      </View>
+                      <View style={styles.calender}>
+                        <CalendarPicker onDateChange={null} width={290} />
+                      </View>
+                      <View style={styles.calenderButtonContainer}>
+                        <TouchableOpacity
+                          onPress={() => setModalVisible(!modalVisible)}>
+                          <View style={styles.buttonSave}>
+                            <Text style={styles.saveButtonText}>SAVE</Text>
+                          </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                          onPress={() => setModalVisible(!modalVisible)}>
+                          <View style={styles.buttonBack}>
+                            <Text style={styles.backButtonText}>BACK</Text>
+                          </View>
+                        </TouchableOpacity>
+                      </View>
                     </View>
-                  </TouchableOpacity>
-                  <TouchableOpacity
-                    onPress={() => setModalVisible(!modalVisible)}>
-                    <View style={styles.buttonBack}>
-                      <Text style={styles.backButtonText}>BACK</Text>
-                    </View>
-                  </TouchableOpacity>
+                  </View>
+                </Modal>
+              </View>
+              <View style={styles.calenderContainer}>
+                <TouchableOpacity onPress={() => setModalVisible(true)}>
+                  <View style={styles.buttonCalender}>
+                    <Text style={styles.terminationText}>FROM</Text>
+                    <Text style={styles.dataText}>7/7/2020</Text>
+                  </View>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <View style={styles.buttonCalender}>
+                    <Text style={styles.terminationText}>TO</Text>
+                    <Text style={styles.dataText}>10/10/2021</Text>
+                  </View>
+                </TouchableOpacity>
+              </View>
+              <View>
+                <View
+                  style={{
+                    width: '100%',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    paddingVertical: 30,
+                  }}>
+                  <Pie
+                    radius={110}
+                    innerRadius={75}
+                    sections={[
+                      {
+                        percentage: 40,
+                        color: '#008b8b',
+                      },
+                      {
+                        percentage: 9,
+                        color: '#ff8c00',
+                      },
+                      {
+                        percentage: 25,
+                        color: '#cd5c5c',
+                      },
+                      {
+                        percentage: 8,
+                        color: '#4169e1',
+                      },
+                      {
+                        percentage: 18,
+                        color: '#800080',
+                      },
+                    ]}
+                    dividerSize={0}
+                    strokeCap={'butt'}
+                  />
+                  <View style={styles.gauge}>
+                    <Text style={styles.gaugeTitleText}>50 CASES</Text>
+                    <Text style={styles.gaugeText}>Total</Text>
+                  </View>
                 </View>
               </View>
-            </View>
-          </Modal>
-        </View>
-        <View style={styles.calenderContainer}>
-          <TouchableOpacity onPress={() => setModalVisible(true)}>
-            <View style={styles.buttonCalender}>
-              <Text style={styles.terminationText}>FROM</Text>
-              <Text style={styles.dataText}>7/7/2020</Text>
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <View style={styles.buttonCalender}>
-              <Text style={styles.terminationText}>TO</Text>
-              <Text style={styles.dataText}>10/10/2021</Text>
-            </View>
-          </TouchableOpacity>
-        </View>
-        <View>
-          <View
-            style={{
-              width: '100%',
-              alignItems: 'center',
-              justifyContent: 'center',
-              paddingVertical: 30,
-            }}>
-            <Pie
-              radius={110}
-              innerRadius={75}
-              sections={[
-                {
-                  percentage: 40,
-                  color: '#008b8b',
-                },
-                {
-                  percentage: 9,
-                  color: '#ff8c00',
-                },
-                {
-                  percentage: 25,
-                  color: '#cd5c5c',
-                },
-                {
-                  percentage: 8,
-                  color: '#4169e1',
-                },
-                {
-                  percentage: 18,
-                  color: '#800080',
-                },
-              ]}
-              dividerSize={0}
-              strokeCap={'butt'}
-            />
-            <View style={styles.gauge}>
-              <Text style={styles.gaugeTitleText}>50 CASES</Text>
-              <Text style={styles.gaugeText}>Total</Text>
-            </View>
-          </View>
-        </View>
-        <View style={styles.statesConteiner}>
-          <View style={styles.statesTextConteiner}>
-            <Text style={styles.statusText2}>CALCUL D'ENVELOPPE:</Text>
-            <Text style={styles.statusText1}>25 cases</Text>
-          </View>
-          <View style={styles.statesTextConteiner}>
-            <Text style={styles.statusText2}>COMPROMIS PREVU:</Text>
-            <Text style={styles.statusText1}>15 cases</Text>
-          </View>
-          <View style={styles.statesTextConteiner}>
-            <Text style={styles.statusText2}>COMPROMIS CIGNE:</Text>
-            <Text style={styles.statusText1}>10 cases</Text>
-          </View>
-        </View>
-        <View style={styles.graphContainer}>
-          <FlatList
-            data={DATA}
-            renderItem={renderItem}
-            keyExtractor={item => item.id}
-          />
-        </View>
-        <View />
+              <View style={styles.statesConteiner}>
+                <View style={styles.statesTextConteiner}>
+                  <Text style={styles.statusText2}>CALCUL D'ENVELOPPE:</Text>
+                  <Text style={styles.statusText1}>25 cases</Text>
+                </View>
+                <View style={styles.statesTextConteiner}>
+                  <Text style={styles.statusText2}>COMPROMIS PREVU:</Text>
+                  <Text style={styles.statusText1}>15 cases</Text>
+                </View>
+                <View style={styles.statesTextConteiner}>
+                  <Text style={styles.statusText2}>COMPROMIS CIGNE:</Text>
+                  <Text style={styles.statusText1}>10 cases</Text>
+                </View>
+              </View>
+            </>
+          }
+          data={DATA}
+          scrollEnabled={false}
+          renderItem={renderItem}
+          keyExtractor={item => item.id}
+        />
       </ScrollView>
+      <View />
       <StatusBar hidden={true} />
     </SafeAreaView>
   );
