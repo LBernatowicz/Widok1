@@ -30,7 +30,7 @@ function calc(x, y) {
   return Math.round((x * 100) / y);
 }
 
-const CheckBoxInfo = ({
+const CircleGraph = ({
   complete,
   total,
   titleText,
@@ -227,4 +227,4 @@ const styles = StyleSheet.create({
     width: 150,
   },
 });
-export default CheckBoxInfo;
+export default CircleGraph;
